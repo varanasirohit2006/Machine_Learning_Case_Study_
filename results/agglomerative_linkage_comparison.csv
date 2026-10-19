@@ -1,0 +1,5 @@
+Linkage,Cophenetic Corr.,Smallest Cluster (%),Silhouette Score,Davies-Bouldin Index,Calinski-Harabasz Index
+ward,0.2256,6.975,0.0214,4.1216,106.4723
+complete,0.1882,5.75,0.0081,4.9327,88.3039
+average,0.4512,0.025,0.1252,1.1532,4.7516
+single,0.5497,0.025,0.1489,0.6222,2.6403

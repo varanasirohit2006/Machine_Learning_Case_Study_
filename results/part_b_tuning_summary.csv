@@ -1,0 +1,6 @@
+Algorithm,Default F1,Tuned F1,F1 Change,Default Accuracy,Tuned Accuracy,Accuracy Change,ROC-AUC Change,CV F1 (best),Best Parameters
+Random Forest Classifier,0.6652,0.6639,-0.0013,0.6702,0.6709,0.0007,0.0072,0.6623,"{'max_depth': 15, 'n_estimators': 300}"
+AdaBoost Classifier,0.6612,0.6709,0.0097,0.6657,0.6709,0.0052,0.0197,0.6662,"{'estimator__max_depth': 2, 'learning_rate': 0.5, 'n_estimators': 200}"
+Gradient Boosting Classifier,0.6742,0.6747,0.0006,0.6766,0.6773,0.0007,0.001,0.6688,"{'learning_rate': 0.1, 'max_depth': 2, 'n_estimators': 200}"
+Bagging Classifier,0.658,0.6683,0.0103,0.6618,0.6716,0.0098,0.0123,0.6649,"{'estimator__max_depth': 10, 'max_samples': 0.7, 'n_estimators': 100}"
+MLP Classifier (Neural Network),0.6697,0.658,-0.0117,0.667,0.6591,-0.008,-0.0105,0.6686,"{'activation': 'tanh', 'alpha': 0.01, 'hidden_layer_sizes': (128, 64)}"

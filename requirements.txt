@@ -1,0 +1,13 @@
+# Minimum versions tested with this project.
+# IMPORTANT for deployment: the saved models are pickles, so scikit-learn must match the version used for
+# training. Run `pip freeze | grep -i -E "scikit-learn|numpy|pandas|scipy|joblib"` (Windows: findstr /i)
+# in the environment where you ran the notebook and replace the lines below with those exact pins.
+numpy>=1.26
+pandas>=2.1
+scikit-learn>=1.4
+scipy>=1.11
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.3
+streamlit>=1.35
+# To run the notebook locally also install: jupyter ipykernel

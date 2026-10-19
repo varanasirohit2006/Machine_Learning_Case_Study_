@@ -1,0 +1,268 @@
+{
+  "class_labels": [
+    "High",
+    "Low",
+    "Medium"
+  ],
+  "classifier": {
+    "name": "Gradient Boosting Classifier",
+    "accuracy": 0.6773,
+    "weighted_f1": 0.6747,
+    "roc_auc": 0.8239
+  },
+  "regressor": {
+    "name": "Gradient Boosting Regressor (tuned)",
+    "r2": 0.8333525919130872,
+    "rmse": 4.55320635363751,
+    "mae": 3.645906794682414
+  },
+  "features": {
+    "numeric": {
+      "operator_experience_years": {
+        "min": 0.2,
+        "max": 20.0,
+        "median": 6.43,
+        "p01": 0.2,
+        "p99": 13.98,
+        "is_integer": false
+      },
+      "machine_age_years": {
+        "min": 0.2,
+        "max": 18.0,
+        "median": 5.75,
+        "p01": 1.01,
+        "p99": 17.73,
+        "is_integer": false
+      },
+      "ambient_temperature_c": {
+        "min": 12.02,
+        "max": 50.06,
+        "median": 29.02,
+        "p01": 18.63,
+        "p99": 39.40009999999998,
+        "is_integer": false
+      },
+      "humidity_pct": {
+        "min": 20.0,
+        "max": 98.0,
+        "median": 62.1,
+        "p01": 27.9898,
+        "p99": 96.85,
+        "is_integer": false
+      },
+      "vibration_mm_s": {
+        "min": 0.207,
+        "max": 68.8548085938609,
+        "median": 2.213,
+        "p01": 0.723,
+        "p99": 6.926039999999993,
+        "is_integer": false
+      },
+      "hydraulic_pressure_bar": {
+        "min": 3.0,
+        "max": 11.65,
+        "median": 7.4,
+        "p01": 4.84,
+        "p99": 9.95,
+        "is_integer": false
+      },
+      "motor_current_a": {
+        "min": 8.0,
+        "max": 108.5163902663548,
+        "median": 31.18,
+        "p01": 12.6598,
+        "p99": 50.450099999999985,
+        "is_integer": false
+      },
+      "rpm": {
+        "min": 900.0,
+        "max": 4500.0,
+        "median": 2795.25,
+        "p01": 1524.58,
+        "p99": 4085.6009999999997,
+        "is_integer": false
+      },
+      "production_rate_units_hr": {
+        "min": 25.0,
+        "max": 288.4911676884805,
+        "median": 118.0,
+        "p01": 48.7,
+        "p99": 189.20599999999902,
+        "is_integer": false
+      },
+      "defect_rate_pct": {
+        "min": 0.05,
+        "max": 18.0,
+        "median": 5.1185,
+        "p01": 0.54,
+        "p99": 17.880209999999966,
+        "is_integer": false
+      },
+      "downtime_hours_30d": {
+        "min": 0.0,
+        "max": 58.79211820900693,
+        "median": 1.06,
+        "p01": 0.05,
+        "p99": 5.27,
+        "is_integer": false
+      },
+      "maintenance_count": {
+        "min": 0.0,
+        "max": 12.0,
+        "median": 1.0,
+        "p01": 0.0,
+        "p99": 5.0,
+        "is_integer": true
+      },
+      "days_since_maintenance": {
+        "min": 1.0,
+        "max": 500.0,
+        "median": 48.2,
+        "p01": 1.0,
+        "p99": 317.20099999999985,
+        "is_integer": false
+      },
+      "power_factor": {
+        "min": 0.707,
+        "max": 0.99,
+        "median": 0.91,
+        "p01": 0.804,
+        "p99": 0.99,
+        "is_integer": false
+      },
+      "oil_temperature_c": {
+        "min": 29.86,
+        "max": 83.01,
+        "median": 55.51,
+        "p01": 39.8395,
+        "p99": 71.07009999999998,
+        "is_integer": false
+      },
+      "bearing_temperature_c": {
+        "min": 25.9,
+        "max": 71.56,
+        "median": 47.89,
+        "p01": 33.8099,
+        "p99": 61.91009999999998,
+        "is_integer": false
+      },
+      "load_percent": {
+        "min": 24.56,
+        "max": 120.0,
+        "median": 76.17500000000001,
+        "p01": 45.72,
+        "p99": 106.76019999999997,
+        "is_integer": false
+      },
+      "noise_db": {
+        "min": 58.68,
+        "max": 124.64296170508582,
+        "median": 70.85,
+        "p01": 63.38,
+        "p99": 78.44,
+        "is_integer": false
+      },
+      "batch_size": {
+        "min": 50.0,
+        "max": 1199.0,
+        "median": 626.0,
+        "p01": 61.99000000000001,
+        "p99": 1189.0,
+        "is_integer": true
+      }
+    },
+    "categorical": {
+      "plant": {
+        "options": [
+          "Ahmedabad",
+          "Bengaluru",
+          "Chennai",
+          "Hyderabad",
+          "Pune"
+        ],
+        "default": "Chennai"
+      },
+      "production_line": {
+        "options": [
+          "L1",
+          "L2",
+          "L3",
+          "L4",
+          "L5",
+          "L6"
+        ],
+        "default": "L5"
+      },
+      "machine_type": {
+        "options": [
+          "CNC",
+          "Compressor",
+          "Lathe",
+          "Milling",
+          "Press",
+          "Robot"
+        ],
+        "default": "CNC"
+      },
+      "shift": {
+        "options": [
+          "Afternoon",
+          "Morning",
+          "Morning ",
+          "NIGHT",
+          "Night",
+          "morning",
+          "night"
+        ],
+        "default": "Morning"
+      },
+      "material_grade": {
+        "options": [
+          "HighStrength",
+          "Premium",
+          "Premium ",
+          "Recycled",
+          "Standard",
+          "recycled",
+          "standard"
+        ],
+        "default": "Standard"
+      },
+      "lubricant_type": {
+        "options": [
+          "Bio",
+          "Mineral",
+          "Synthetic"
+        ],
+        "default": "Mineral"
+      },
+      "supplier_tier": {
+        "options": [
+          "Local",
+          "Tier1",
+          "Tier2",
+          "Tier3"
+        ],
+        "default": "Tier1"
+      },
+      "inspection_status": {
+        "options": [
+          "Minor_Issue",
+          "PASS ",
+          "Pass",
+          "Pending",
+          "Rework",
+          "pass",
+          "pending"
+        ],
+        "default": "Pass"
+      }
+    }
+  },
+  "versions": {
+    "python": "3.12.5",
+    "scikit-learn": "1.8.0",
+    "numpy": "2.1.3",
+    "pandas": "2.2.3"
+  }
+}
