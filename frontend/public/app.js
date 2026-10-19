@@ -162,7 +162,7 @@ function Navbar() {
     <nav className="sticky top-0 z-40 glass border-b border-slate-700/30">
       <div className="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
         <div className="flex items-center gap-2 font-bold text-cyan-300">
-          <span>🏭</span> SmartMfg ML
+          SmartMfg ML
         </div>
         <div className="flex items-center gap-1">
           {navLinks.map((l) => (

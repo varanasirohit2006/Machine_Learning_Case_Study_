@@ -220,7 +220,7 @@ function Navbar() {
     className: "max-w-7xl mx-auto px-6 h-14 flex items-center justify-between"
   }, /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-2 font-bold text-cyan-300"
-  }, /*#__PURE__*/React.createElement("span", null, "🏭"), " SmartMfg ML"), /*#__PURE__*/React.createElement("div", {
+  }, "SmartMfg ML"), /*#__PURE__*/React.createElement("div", {
     className: "flex items-center gap-1"
   }, navLinks.map(l => /*#__PURE__*/React.createElement(NavLink, {
     key: l.to,
