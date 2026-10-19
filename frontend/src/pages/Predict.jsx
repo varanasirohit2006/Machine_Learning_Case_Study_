@@ -24,13 +24,43 @@ export default function Predict() {
   const handleNum = (f, v) => setValues({ ...values, [f]: v });
   const handleCat = (f, v) => setValues({ ...values, [f]: v });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const derived = addDerivedFeatures(values);
+
+    try {
+      const response = await fetch('/api/predict', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(derived),
+      });
+      if (response.ok) {
+        const data = await response.json();
+        const cluster = estimateCluster(derived);
+        const colors = { Low: "#22c55e", Medium: "#f59e0b", High: "#ef4444" };
+        const score = Math.round((data.probabilities[data.risk] || 0.5) * 100);
+        setResult({
+          energy: data.energy_kwh,
+          risk: {
+            risk: data.risk,
+            score,
+            color: colors[data.risk] || "#22c55e",
+            confidence: data.probabilities,
+          },
+          cluster,
+          derived,
+          isLiveModel: true,
+        });
+        return;
+      }
+    } catch (err) {
+      // Fallback to client heuristics when backend service is unreachable
+    }
+
     const energy = estimateEnergy(derived);
     const risk = estimateRisk(derived);
     const cluster = estimateCluster(derived);
-    setResult({ energy, risk, cluster, derived });
+    setResult({ energy, risk, cluster, derived, isLiveModel: false });
   };
 
   const reset = () => {

@@ -10,4 +10,7 @@ matplotlib>=3.8
 seaborn>=0.13
 joblib>=1.3
 streamlit>=1.35
+fastapi>=0.100.0
+uvicorn>=0.23.0
 # To run the notebook locally also install: jupyter ipykernel
+
